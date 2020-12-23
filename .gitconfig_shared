@@ -1,0 +1,13 @@
+[core]
+  # Use vim for commit editing
+  editor = vim -c \"set fenc=utf-8\"
+
+  # Use custom `.gitignore` and `.gitattributes`
+  excludesfile = ~/.gitignore_global
+
+[fetch]
+  # Prune dead branches on fetch
+  prune = true
+
+[pull]
+  ff = only
