@@ -43,6 +43,11 @@ setopt auto_cd
 # 移動したディレクトリを記録しておく。"cd -[Tab]"で移動履歴を一覧
 setopt auto_pushd
 
+if
+    [[ -s ~/.nvm/nvm.sh ]] ; then
+    source ~/.nvm/nvm.sh
+fi
+
 # Use keycodes (generated via zkbd) if present, otherwise fallback on
 # values from terminfo
 if [[ -r ${ZDOTDIR:-$HOME}/.zkbd/${TERM}-${VENDOR} ]] ; then
@@ -95,3 +100,4 @@ PS1="[%n@%m %1~ ]%# "
 
 # Useful support for interacting with Terminal.app or other terminal programs
 [ -r "/etc/zshrc_$TERM_PROGRAM" ] && . "/etc/zshrc_$TERM_PROGRAM"
+
