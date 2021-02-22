@@ -18,6 +18,8 @@ SAVEHIST=6000000
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 
+alias history='history 100'
+
 # コマンド履歴検索
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
