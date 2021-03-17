@@ -37,7 +37,7 @@ setopt list_types
 setopt auto_list
 
 # コマンド訂正
-setopt correct
+unsetopt correctall
 
 # ディレクトリ名を入力するだけで移動
 setopt auto_cd
