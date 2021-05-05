@@ -103,5 +103,5 @@ PS1="[%n@%m %1~ ]%# "
 # Useful support for interacting with Terminal.app or other terminal programs
 [ -r "/etc/zshrc_$TERM_PROGRAM" ] && . "/etc/zshrc_$TERM_PROGRAM"
 
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
