@@ -48,6 +48,19 @@ setopt auto_pushd
 if
     [[ -s ~/.nvm/nvm.sh ]] ; then
     source ~/.nvm/nvm.sh
+
+    # NODEバージョン自動切り替え
+    autoload -U add-zsh-hook
+    load-nvmrc() {
+      if [[ -f .nvmrc && -r .nvmrc ]]; then
+        nvm use
+      elif [[ $(nvm version) != $(nvm version default)  ]]; then
+        echo "Reverting to nvm default version"
+        nvm use default
+      fi
+    }
+    add-zsh-hook chpwd load-nvmrc
+    load-nvmrc
 fi
 
 # Use keycodes (generated via zkbd) if present, otherwise fallback on
